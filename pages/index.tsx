@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -17,29 +18,24 @@ export default function Home() {
 
                 <code className={styles.code}>code</code>
 
-                <div
-                    className={styles.grid}
-                    onClick={() => {
-                        alert("Title");
-                    }}
-                >
-                    <div className={styles.card}>
-                        <h2>Title &rarr;</h2>
+                <div className={styles.grid}>
+                    <Link className={styles.card} href="/">
+                        <h2>Home &rarr;</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
                         </p>
-                    </div>
+                    </Link>
 
-                    <div className={styles.card}>
-                        <h2>Title &rarr;</h2>
+                    <Link className={styles.card} href="/about">
+                        <h2>About &rarr;</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
                         </p>
-                    </div>
+                    </Link>
 
                     <div className={styles.card}>
                         <h2>Title &rarr;</h2>
